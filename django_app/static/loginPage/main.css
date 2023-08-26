@@ -1,0 +1,11 @@
+.LoginForm {
+    width: 400px;
+    margin: auto;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.TitleFormLogin {
+    color: blue;
+}

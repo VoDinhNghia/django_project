@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../static/loginPage/main.css">
+    {% load django_bootstrap5 widget_tweaks %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="LoginForm">
+            <h2 class="mb-4 text-center TitleFormLogin">Login page</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            <div class="form-group mt-2">
+                <p>Username: </p>
+                {% render_field form.username type="text" class="form-control" placeholder="Username" %}
+            </div>
+            <div class="form-group mt-2 mb-4">
+                <p>Password: </p>
+                {% render_field form.password type="password" class="form-control" %}
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Login</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
