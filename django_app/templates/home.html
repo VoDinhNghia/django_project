@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,9 +8,23 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../static/homePage/main.css'>
     <script src='../static/homePage/main.js'></script>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
+
 <body>
-    <div class="HomePage">Hello</div>
-    <div>{{data}}</div>
+    {% include 'menu.html' %}
+    {% if user.is_authenticated %}
+      <div class="container">
+        <div class="HomePage">Hello {{user.first_name}}</div>
+        <div>{{data}}</div>
+        </div>
+     {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+    {% include 'footer.html' %}
 </body>
+
 </html>
