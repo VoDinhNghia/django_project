@@ -21,3 +21,7 @@
 
 - link home page: http://localhost:8000
 - link admin: http://localhost:8000/admin
+
+## reference
+- https://learndjango.com/tutorials/django-login-and-logout-tutorial
+- https://ngangasn.com/how-to-use-bootstrap-5-with-django-the-right-way/?expand_article=1
