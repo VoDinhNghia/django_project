@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/postPage/main.css'>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="FormCreatePost">
+            <form method="post" action="api-create-post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control"/>
+                </div>
+                <button type="submit">Create post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
