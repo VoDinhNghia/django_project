@@ -15,6 +15,9 @@
 - install package: python -m pip install -r requirement.txt
 - run migrate: python manage.py migrate
 - start project: python manage.py runserver
-
+## create supperuser
+- run cmd: python manage.py createsuperuser --username=admin --email=vodinhnghia85@gmail.com
 ## link project
-- http://localhost:8000
+
+- link home page: http://localhost:8000
+- link admin: http://localhost:8000/admin
