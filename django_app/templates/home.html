@@ -14,17 +14,19 @@
 </head>
 
 <body>
-    {% include 'menu.html' %}
     {% if user.is_authenticated %}
-      <div class="container">
-        <div class="HomePage">Hello {{user.first_name}}</div>
-        <div>{{data}}</div>
+      {% include 'menu.html' %}
+        <div class="container mt-2">
+            <div class="HomePage">Hello {{user.first_name}}</div>
+            <div>{{data}}</div>
         </div>
-     {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Login</a>
+      {% include 'footer.html' %}
+    {% else %}
+        <div class="container mt-2">
+            <p class="text-center">You are not logged in</p>
+            <p class="text-center"><a href="{% url 'login' %}">Login</a></p>
+        </div>
     {% endif %}
-    {% include 'footer.html' %}
 </body>
 
 </html>
