@@ -28,11 +28,9 @@
         >
       </button>
     </div>
-    {% include 'footer.html' %} {% else %}
-    <div class="container mt-2">
-      <p class="text-center">You are not logged in</p>
-      <p class="text-center"><a href="{% url 'login' %}">Login</a></p>
-    </div>
+    {% include 'footer.html' %} 
+    {% else %}
+    {% include 'introduction/intro_main_page.html' %}
     {% endif %}
   </body>
 </html>
