@@ -12,7 +12,7 @@
       href="../static/homePage/main.css"
     />
     <script src="../static/homePage/main.js"></script>
-    {% load django_bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+    {% load django_bootstrap5 widget_tweaks %} {% bootstrap_css %} {% bootstrap_javascript %}
   </head>
 
   <body>
@@ -20,6 +20,13 @@
     <div class="container mt-2">
       <div class="HomePage">Hello {{user.first_name}}</div>
       <div>{{data}}</div>
+      <button type="button" class="btn btn-primary mt-2">
+        <a
+          href="{% url 'simple-upload' %}"
+          class="text-decoration-none text-white"
+          >Upload Image</a
+        >
+      </button>
       <button type="button" class="btn btn-primary mt-2">
         <a
           href="{% url 'create-post' %}"

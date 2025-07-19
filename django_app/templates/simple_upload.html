@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Home page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../static/homePage/main.css" />
+  <script src="../static/homePage/main.js"></script>
+  {% load django_bootstrap5 widget_tweaks %} {% bootstrap_css %} {% bootstrap_javascript %}
+</head>
+
+<body>
+  <div class="container mt-2">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input class="form-control" type="file" multiple name="myfile">
+      <button type="submit" class="btn btn-primary mt-2">Upload</button>
+    </form>
+    <button type="button" class="btn btn-primary mt-2">
+      <a href="{% url 'home-view' %}" class="text-decoration-none text-white">Go to home page</a>
+    </button>
+    {% if data %}
+    <img src='{{data}}' alt="{{data}}">
+    {% endif %}
+  </div>
+</body>
+
+</html>
