@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Camera page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../static/camera_page/main.css" />
+    <script src="../../static/camera_page/main.js"></script>
+    {% load django_bootstrap5 widget_tweaks %} {% bootstrap_css %} {% bootstrap_javascript %}
+</head>
+
+<body>
+    <h1>Access Camera and Capture Photo</h1>
+    <video id="video">Video stream not available.</video>
+    <button id="start-button">Capture photo</button>
+    <canvas id="canvas"></canvas>
+    <img id="photo" alt="The screen capture will appear in this box." />
+    <script src="../../static/camera_page/main.js"></script>
+</body>
+
+</html>
