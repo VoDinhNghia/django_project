@@ -2,8 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.homePage, name='home-view'),
-    path('create-post', views.createPost, name='create-post'),
-    path('api-create-post', views.createNewPost, name='api-create-post'),
-    path('simple-upload', views.simpleUpload, name='simple-upload')
+    path('', views.home_page, name='home-view'),
+    path('create-post', views.create_post, name='create-post'),
+    path('api-create-post', views.create_new_post, name='api-create-post'),
+    path('simple-upload', views.simple_upload, name='simple-upload'),
+    path('resize-img', views.resize_img, name='resize-img')
 ]
